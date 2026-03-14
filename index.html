@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Zscaler + Azure AD Integration</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(120deg,#00c6ff,#0072ff);
+color:white;
+}
+
+header{
+text-align:center;
+padding:40px;
+}
+
+nav{
+text-align:center;
+background:black;
+padding:15px;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#00c6ff;
+}
+
+.container{
+padding:40px;
+text-align:center;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.card{
+background:white;
+color:black;
+padding:20px;
+border-radius:10px;
+width:250px;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.1);
+}
+
+button{
+background:#ff6600;
+border:none;
+padding:10px 20px;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#cc5200;
+}
+
+.login{
+background:white;
+color:black;
+padding:20px;
+width:300px;
+margin:auto;
+border-radius:10px;
+}
+
+input{
+width:90%;
+padding:10px;
+margin:10px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:black;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Zscaler + Azure AD Integration</h1>
+<p>Secure Identity Based Cloud Access</p>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Technologies</a>
+<a href="#">Architecture</a>
+<a href="#">Login</a>
+</nav>
+
+<div class="container">
+
+<h2>Project Overview</h2>
+<p>
+This project demonstrates secure authentication by integrating
+Zscaler cloud security with Azure Active Directory identity provider.
+</p>
+
+<button onclick="info()">Learn More</button>
+
+</div>
+
+<div class="container">
+
+<h2>Technologies Used</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Zscaler</h3>
+<p>Cloud based security platform that protects users from cyber threats.</p>
+</div>
+
+<div class="card">
+<h3>Azure AD</h3>
+<p>Identity provider that manages authentication and user access.</p>
+</div>
+
+<div class="card">
+<h3>Single Sign On</h3>
+<p>Allows one login to access multiple applications securely.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<h2>Login Simulation</h2>
+
+<div class="login">
+
+<input type="text" id="user" placeholder="Username">
+
+<input type="password" id="pass" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p id="result"></p>
+
+</div>
+
+</div>
+
+<footer>
+<p>Cyber Security Project – Zscaler Integration with Azure AD</p>
+</footer>
+
+<script>
+
+function info()
+{
+alert("Zscaler integrates with Azure AD to provide secure Single Sign-On authentication.");
+}
+
+function login()
+{
+var u=document.getElementById("user").value;
+var p=document.getElementById("pass").value;
+
+if(u=="admin" && p=="1234")
+{
+document.getElementById("result").innerHTML="Login Successful";
+document.getElementById("result").style.color="green";
+}
+else
+{
+document.getElementById("result").innerHTML="Invalid Login";
+document.getElementById("result").style.color="red";
+}
+}
+
+</script>
+
+</body>
+</html>
